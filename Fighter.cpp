@@ -200,13 +200,13 @@ void Fighter::performNormalAttack() {
             mGame->addAttack(std::move(a)); break;
         }
         case Element::Sword: {
-            auto a=std::make_unique<Attack>(ap, sf::Vector2f(mFacing*500,0),
-                sf::Vector2f(30,10), 15, sf::Vector2f(mFacing*250,-100), 0.5f, Element::Metal, this, 0);
+            auto a=std::make_unique<Attack>(ap, sf::Vector2f(mFacing*560,-20),
+                sf::Vector2f(34,14), 15, sf::Vector2f(mFacing*280,-120), 0.55f, Element::Sword, this, 0);
             mGame->addAttack(std::move(a)); break;
         }
         case Element::Fan: {
-            auto a=std::make_unique<Attack>(ap, sf::Vector2f(mFacing*450,0),
-                sf::Vector2f(20,20), 10, sf::Vector2f(mFacing*300,-150), 0.6f, Element::Air, this, 0);
+            auto a=std::make_unique<Attack>(ap, sf::Vector2f(mFacing*470,-10),
+                sf::Vector2f(28,24), 10, sf::Vector2f(mFacing*320,-160), 0.7f, Element::Fan, this, 0);
             mGame->addAttack(std::move(a)); break;
         }
     }
@@ -289,16 +289,24 @@ void Fighter::performSpecial1() {
             } break;
         }
         case Element::Sword: {
-            auto a=std::make_unique<Attack>(mPos, sf::Vector2f(mFacing*400,-200),
-                sf::Vector2f(20,20), 20, sf::Vector2f(mFacing*400,-200), 1.5f, Element::Metal, this, 1);
-            mGame->addAttack(std::move(a)); break;
+            for(int i=-1;i<=1;i++){
+                sf::Vector2f ap=mPos; ap.x+=mFacing*30;
+                float angle=i*10.f*3.14159f/180.f;
+                sf::Vector2f vel(mFacing*520*std::cos(angle), 520*std::sin(angle));
+                auto a=std::make_unique<Attack>(ap, vel, sf::Vector2f(26,14), 18,
+                    sf::Vector2f(mFacing*320,-180), 1.0f, Element::Sword, this, 1);
+                mGame->addAttack(std::move(a));
+            }
+            break;
         }
         case Element::Fan: {
-            for(int i=-1; i<=1; i+=2){
-                auto a=std::make_unique<Attack>(mPos, sf::Vector2f(mFacing*500, i*100),
-                    sf::Vector2f(30,30), 15, sf::Vector2f(mFacing*200,-50), 1.0f, Element::Air, this, 1);
+            for(int i=-1; i<=1; i++){
+                sf::Vector2f ap=mPos; ap.x+=mFacing*(25+i*8);
+                auto a=std::make_unique<Attack>(ap, sf::Vector2f(mFacing*430, i*140),
+                    sf::Vector2f(28,22), 13, sf::Vector2f(mFacing*240,-90), 0.9f, Element::Fan, this, 1);
                 mGame->addAttack(std::move(a));
-            } break;
+            }
+            break;
         }
     }
 }
@@ -363,12 +371,12 @@ void Fighter::performSpecial2() {
         }
         case Element::Sword: {
             auto a=std::make_unique<Attack>(mPos, sf::Vector2f(0,0),
-                sf::Vector2f(20,60), 5, sf::Vector2f(mFacing*200,-100), 0.8f, Element::Metal, this, 2);
+                sf::Vector2f(24,64), 6, sf::Vector2f(mFacing*220,-120), 0.8f, Element::Sword, this, 2);
             mGame->addAttack(std::move(a)); break;
         }
         case Element::Fan: {
             auto a=std::make_unique<Attack>(mPos, sf::Vector2f(0,0),
-                sf::Vector2f(50,50), 4, sf::Vector2f(mFacing*250,-150), 0.7f, Element::Air, this, 2);
+                sf::Vector2f(52,52), 4, sf::Vector2f(mFacing*260,-160), 0.75f, Element::Fan, this, 2);
             mGame->addAttack(std::move(a)); break;
         }
     }
@@ -453,13 +461,13 @@ void Fighter::performSpecial3() {
             for(int i=0; i<5; i++){
                 sf::Vector2f sp(mPos.x+mFacing*(20+i*40), mPos.y);
                 auto a=std::make_unique<Attack>(sp, sf::Vector2f(mFacing*600,0),
-                    sf::Vector2f(40,40), 30, sf::Vector2f(mFacing*400,-200), 0.3f, Element::Metal, this, 3);
+                    sf::Vector2f(42,42), 30, sf::Vector2f(mFacing*420,-220), 0.3f, Element::Sword, this, 3);
                 mGame->addAttack(std::move(a));
             } break;
         }
         case Element::Fan: {
             auto a=std::make_unique<Attack>(mPos, sf::Vector2f(mFacing*200,0),
-                sf::Vector2f(100,200), 40, sf::Vector2f(mFacing*500,-400), 2.0f, Element::Air, this, 3);
+                sf::Vector2f(100,200), 40, sf::Vector2f(mFacing*500,-400), 2.0f, Element::Fan, this, 3);
             mGame->addAttack(std::move(a)); break;
         }
     }
