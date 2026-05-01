@@ -13,58 +13,58 @@ CartoonRenderer::CartoonRenderer(){}
 // =====================================================================
 sf::Color CartoonRenderer::bodyCol(Element e) const {
     switch(e){
-        case Element::Air:       return sf::Color(255,210,160);
-        case Element::Fire:      return sf::Color(245,205,155);
-        case Element::Water:     return sf::Color(150,105,75);
-        case Element::Earth:     return sf::Color(210,175,130);
-        case Element::Metal:     return sf::Color(200,200,210);
-        case Element::Lightning: return sf::Color(240,220,180);
-        case Element::Plant:     return sf::Color(100,200,80);
-        case Element::Ice:       return sf::Color(180,240,255);
-        case Element::Sword:     return sf::Color(150,170,190);
-        case Element::Fan:       return sf::Color(255,245,230);
+        case Element::Air:       return sf::Color(255,218,170);  // Aang - warm peach
+        case Element::Fire:      return sf::Color(245,210,165);  // Zuko - pale
+        case Element::Water:     return sf::Color(150,105,75);   // Katara - brown
+        case Element::Earth:     return sf::Color(235,210,175);  // Toph - fair/pale
+        case Element::Metal:     return sf::Color(200,200,210);  // Metal Toph
+        case Element::Lightning: return sf::Color(245,225,195);  // Azula - porcelain
+        case Element::Plant:     return sf::Color(180,150,110);  // Swamp - tan
+        case Element::Ice:       return sf::Color(150,105,75);   // Sokka - Water Tribe brown
+        case Element::Sword:     return sf::Color(220,185,150);  // Sword - tanned
+        case Element::Fan:       return sf::Color(250,245,238);  // Kyoshi - white paint
     } return sf::Color::White;
 }
 sf::Color CartoonRenderer::darkCol(Element e) const {
     switch(e){
-        case Element::Air:       return sf::Color(230,130,30);
-        case Element::Fire:      return sf::Color(140,20,20);
-        case Element::Water:     return sf::Color(30,60,160);
-        case Element::Earth:     return sf::Color(50,120,40);
-        case Element::Metal:     return sf::Color(80,80,95);
-        case Element::Lightning: return sf::Color(90,30,160);
-        case Element::Plant:     return sf::Color(30,80,20);
-        case Element::Ice:       return sf::Color(60,100,160);
-        case Element::Sword:     return sf::Color(80,100,120);
-        case Element::Fan:       return sf::Color(160,120,40);
+        case Element::Air:       return sf::Color(230,140,30);   // orange monk robe
+        case Element::Fire:      return sf::Color(120,15,15);    // Zuko dark red armor
+        case Element::Water:     return sf::Color(25,55,145);    // Katara deep blue
+        case Element::Earth:     return sf::Color(45,115,35);    // Toph green
+        case Element::Metal:     return sf::Color(75,80,90);     // dark steel
+        case Element::Lightning: return sf::Color(130,15,20);    // Azula dark crimson
+        case Element::Plant:     return sf::Color(30,75,20);     // swamp dark green
+        case Element::Ice:       return sf::Color(35,65,135);    // Sokka dark blue
+        case Element::Sword:     return sf::Color(60,60,70);     // dark armor
+        case Element::Fan:       return sf::Color(35,100,55);    // Kyoshi deep green
     } return sf::Color::White;
 }
 sf::Color CartoonRenderer::lightCol(Element e) const {
     switch(e){
-        case Element::Air:       return sf::Color(255,230,100);
-        case Element::Fire:      return sf::Color(255,100,30);
-        case Element::Water:     return sf::Color(100,180,255);
-        case Element::Earth:     return sf::Color(130,200,80);
-        case Element::Metal:     return sf::Color(200,200,220);
-        case Element::Lightning: return sf::Color(255,220,50);
-        case Element::Plant:     return sf::Color(150,255,100);
-        case Element::Ice:       return sf::Color(220,255,255);
-        case Element::Sword:     return sf::Color(200,220,255);
-        case Element::Fan:       return sf::Color(255,240,150);
+        case Element::Air:       return sf::Color(255,235,110);  // yellow robe accent
+        case Element::Fire:      return sf::Color(255,100,30);   // fire orange
+        case Element::Water:     return sf::Color(100,175,245);  // light blue
+        case Element::Earth:     return sf::Color(140,200,80);   // light green
+        case Element::Metal:     return sf::Color(195,200,215);  // light steel
+        case Element::Lightning: return sf::Color(255,200,40);   // Azula gold trim
+        case Element::Plant:     return sf::Color(140,240,90);   // bright leaf
+        case Element::Ice:       return sf::Color(215,245,255);  // ice white-blue
+        case Element::Sword:     return sf::Color(200,215,240);  // steel blue
+        case Element::Fan:       return sf::Color(255,210,50);   // Kyoshi gold
     } return sf::Color::White;
 }
 sf::Color CartoonRenderer::accentCol(Element e) const {
     switch(e){
-        case Element::Air:       return sf::Color(100,180,240);
-        case Element::Fire:      return sf::Color(255,200,0);
-        case Element::Water:     return sf::Color(200,230,255);
-        case Element::Earth:     return sf::Color(139,90,43);
-        case Element::Metal:     return sf::Color(170,170,180);
-        case Element::Lightning: return sf::Color(255,255,255);
-        case Element::Plant:     return sf::Color(50,150,30);
-        case Element::Ice:       return sf::Color(255,255,255);
-        case Element::Sword:     return sf::Color(100,120,150);
-        case Element::Fan:       return sf::Color(200,80,40);
+        case Element::Air:       return sf::Color(80,170,235);   // arrow blue
+        case Element::Fire:      return sf::Color(255,195,30);   // Zuko gold
+        case Element::Water:     return sf::Color(220,235,255);  // fur white
+        case Element::Earth:     return sf::Color(139,95,45);    // earth brown
+        case Element::Metal:     return sf::Color(165,170,180);  // metal grey
+        case Element::Lightning: return sf::Color(255,195,30);   // Azula gold
+        case Element::Plant:     return sf::Color(50,140,30);    // vine green
+        case Element::Ice:       return sf::Color(240,240,255);  // ice white
+        case Element::Sword:     return sf::Color(90,100,120);   // dark steel
+        case Element::Fan:       return sf::Color(190,40,40);    // Kyoshi red
     } return sf::Color::White;
 }
 sf::Color CartoonRenderer::flash(sf::Color c, float f) const {
@@ -234,276 +234,533 @@ static void drawHeldFan(sf::RenderWindow& w, sf::Vector2f pos, int facing, float
 
 void CartoonRenderer::drawAirBenderHead(sf::RenderWindow& w, sf::Vector2f p, int face, float bob, float fl) {
     sf::Vector2f hp(p.x, p.y - 52 + bob);
-    float r = 19;
+    float r = 20;
     sf::Color skin = flash(bodyCol(Element::Air), fl);
-    sf::Color outline = flash(sf::Color(180,130,60), fl);
+    sf::Color outline = flash(sf::Color(190,140,70), fl);
+    sf::Color arrowBlue = flash(sf::Color(55,155,230), fl);
 
-    // Head
-    drawEllipse(w, hp.x, hp.y, r, r+1, skin, outline, 2.f);
-    // Blue arrow tattoo (pointing down forehead) — wider, more visible
-    sf::ConvexShape arr; arr.setPointCount(4);
-    arr.setPoint(0,{0,-r-1}); arr.setPoint(1,{-7,-r+9}); arr.setPoint(2,{0,-r+5}); arr.setPoint(3,{7,-r+9});
-    arr.setPosition(hp); arr.setFillColor(flash(sf::Color(60,155,230),fl)); w.draw(arr);
-    // Arrow shaft going back
-    sf::RectangleShape al({3, 10}); al.setOrigin(1.5f, 0); al.setPosition(hp.x, hp.y-r);
-    al.setFillColor(flash(sf::Color(60,155,230),fl)); w.draw(al);
-    // Cheek blush
+    // Bald round head — Aang's signature smooth dome
+    drawEllipse(w, hp.x, hp.y, r, r+2, skin, outline, 2.f);
+    // Subtle head shine (bald highlight)
+    drawEllipse(w, hp.x-3, hp.y-6, 8, 5, sf::Color(255,240,220,60));
+
+    // Blue arrow tattoo — prominent V-shape pointing down forehead
+    sf::ConvexShape arr; arr.setPointCount(7);
+    arr.setPoint(0, {0, -r-3});      // tip top
+    arr.setPoint(1, {-10, -r+8});    // left wing outer
+    arr.setPoint(2, {-5, -r+5});     // left wing inner
+    arr.setPoint(3, {0, -r+10});     // center notch
+    arr.setPoint(4, {5, -r+5});      // right wing inner
+    arr.setPoint(5, {10, -r+8});     // right wing outer
+    arr.setPoint(6, {0, -r-3});      // back to tip
+    arr.setPosition(hp); arr.setFillColor(arrowBlue); w.draw(arr);
+    // Arrow shaft going over crown of head
+    sf::RectangleShape al({4, 14}); al.setOrigin(2.f, 0);
+    al.setPosition(hp.x, hp.y-r-3);
+    al.setFillColor(arrowBlue); w.draw(al);
+    // Arrow side lines extending down temples
+    for(int i=-1;i<=1;i+=2){
+        sf::RectangleShape sideLine({2.5f, 8}); sideLine.setOrigin(1.25f, 0);
+        sideLine.setPosition(hp.x+i*8, hp.y-r+9); sideLine.setRotation(i*25.f);
+        sideLine.setFillColor(flash(sf::Color(55,155,230,160),fl)); w.draw(sideLine);
+    }
+
+    // Ears — prominent, rounded (Aang's big ears)
+    for(int i=-1;i<=1;i+=2){
+        drawEllipse(w, hp.x+i*(r+1), hp.y+2, 5, 6, skin, outline, 1.2f);
+        // Inner ear detail
+        drawEllipse(w, hp.x+i*(r+1), hp.y+3, 2.5f, 3.5f, sf::Color(240,180,140,100));
+    }
+
+    // Cheek blush — anime style
     for(int i=-1;i<=1;i+=2)
-        drawEllipse(w, hp.x+i*10, hp.y+5, 5, 3, sf::Color(255,170,130,80));
-    // Eyes
-    drawEyePair(w, hp.x, hp.y-2, 7, 6, 4, flash(sf::Color(130,130,145),fl), face);
-    // Eyebrows — gentle monk look
+        drawEllipse(w, hp.x+i*11, hp.y+6, 5.5f, 3, sf::Color(255,175,135,70));
+
+    // Big expressive grey eyes — Aang's warm gentle look
+    drawEyePair(w, hp.x, hp.y-1, 7.5f, 5.5f, 4.5f, flash(sf::Color(140,145,155),fl), face);
+
+    // Gentle arched eyebrows (no hair, just subtle skin-tone brows)
     for(int i=-1;i<=1;i+=2)
-        drawBrow(w, hp.x+i*7, hp.y-8, 9, flash(sf::Color(90,60,30),fl), 0);
-    // Mouth — calm smile
-    drawMouth(w, hp.x+face*2, hp.y+9, 6, true, sf::Color(160,80,70));
-    // Ears
-    for(int i=-1;i<=1;i+=2)
-        drawEllipse(w, hp.x+i*(r-1), hp.y+2, 4, 5, skin, outline, 1.f);
+        drawBrow(w, hp.x+i*7, hp.y-8, 9, flash(sf::Color(200,160,110),fl), i*-3.f);
+
+    // Happy calm smile
+    drawMouth(w, hp.x+face*2, hp.y+10, 7, true, sf::Color(170,85,70));
 }
 
 void CartoonRenderer::drawFireBenderHead(sf::RenderWindow& w, sf::Vector2f p, int face, float bob, float fl) {
     sf::Vector2f hp(p.x, p.y - 52 + bob);
-    float r = 18;
+    float r = 19;
     sf::Color skin = flash(bodyCol(Element::Fire), fl);
-    sf::Color hair = flash(sf::Color(25,15,15), fl);
+    sf::Color hair = flash(sf::Color(20,12,10), fl);
 
-    // Pointed topknot base
+    // Sharp angular topknot — Zuko's signature hairstyle
     sf::ConvexShape topknot; topknot.setPointCount(5);
-    topknot.setPoint(0,{-r+4,-2}); topknot.setPoint(1,{-5,-r-12}); topknot.setPoint(2,{0,-r-18});
-    topknot.setPoint(3,{5,-r-12}); topknot.setPoint(4,{r-4,-2});
+    topknot.setPoint(0,{-r+5,-2}); topknot.setPoint(1,{-6,-r-14});
+    topknot.setPoint(2,{0,-r-22}); topknot.setPoint(3,{6,-r-14}); topknot.setPoint(4,{r-5,-2});
     topknot.setPosition(hp); topknot.setFillColor(hair); w.draw(topknot);
-    // Side swept hair
+    // Topknot tie band
+    sf::RectangleShape tband({10, 3}); tband.setOrigin(5,1.5f);
+    tband.setPosition(hp.x, hp.y-r-8); tband.setFillColor(flash(sf::Color(180,30,20),fl)); w.draw(tband);
+
+    // Side swept bangs (angular, covering sides of forehead)
     for(int i=-1;i<=1;i+=2){
-        sf::ConvexShape sh; sh.setPointCount(4);
-        sh.setPoint(0,{(float)(i*(r-2)),0}); sh.setPoint(1,{(float)(i*(r+5)),-8});
-        sh.setPoint(2,{(float)(i*(r+3)),-16}); sh.setPoint(3,{(float)(i*(r-5)),-14});
+        sf::ConvexShape sh; sh.setPointCount(5);
+        sh.setPoint(0,{(float)(i*(r-3)),2}); sh.setPoint(1,{(float)(i*(r+4)),-6});
+        sh.setPoint(2,{(float)(i*(r+6)),-14}); sh.setPoint(3,{(float)(i*(r+2)),-20});
+        sh.setPoint(4,{(float)(i*(r-6)),-16});
         sh.setPosition(hp); sh.setFillColor(hair); w.draw(sh);
     }
-    // Head face
-    drawEllipse(w, hp.x, hp.y, r, r+1, skin, flash(sf::Color(160,120,80),fl), 2.f);
-    // Gold Fire Nation crown top
-    sf::ConvexShape crown; crown.setPointCount(5);
-    crown.setPoint(0,{-8,-r-3}); crown.setPoint(1,{-4,-r-8}); crown.setPoint(2,{0,-r-11});
-    crown.setPoint(3,{4,-r-8}); crown.setPoint(4,{8,-r-3});
-    crown.setPosition(hp); crown.setFillColor(flash(sf::Color(255,200,40),fl)); w.draw(crown);
+    // Spiky fringe detail
+    for(int i=-1;i<=1;i+=2){
+        drawSpike(w, hp.x+i*6, hp.y-r+2, hp.x+i*8, hp.y-r-6, 3, hair);
+    }
 
-    // Eyes — gold/amber, intense
-    drawEyePair(w, hp.x, hp.y-2, 7, 6, 4.5f, flash(sf::Color(190,140,0),fl), face);
-    // Angry brows
+    // Face (angular jaw line)
+    sf::CircleShape faceShape(r, 7);
+    faceShape.setOrigin(r,r); faceShape.setPosition(hp);
+    faceShape.setFillColor(skin); faceShape.setOutlineThickness(2);
+    faceShape.setOutlineColor(flash(sf::Color(170,130,85),fl)); w.draw(faceShape);
+
+    // Gold Fire Nation crown piece on topknot
+    sf::ConvexShape crown; crown.setPointCount(7);
+    crown.setPoint(0,{-10,-r-5}); crown.setPoint(1,{-7,-r-10}); crown.setPoint(2,{-3,-r-13});
+    crown.setPoint(3,{0,-r-15}); crown.setPoint(4,{3,-r-13});
+    crown.setPoint(5,{7,-r-10}); crown.setPoint(6,{10,-r-5});
+    crown.setPosition(hp); crown.setFillColor(flash(sf::Color(255,200,40),fl)); w.draw(crown);
+    // Crown gem
+    drawEllipse(w, hp.x, hp.y-r-12, 2.5f, 2.5f, flash(sf::Color(255,60,30),fl));
+
+    // BURN SCAR — Zuko's left eye (drawn on -x side = character's left)
+    // Layered scar: outer redness, inner pink, scarred texture
+    sf::ConvexShape scarOuter; scarOuter.setPointCount(6);
+    scarOuter.setPoint(0,{-16,-8}); scarOuter.setPoint(1,{-14,-2});
+    scarOuter.setPoint(2,{-8,4}); scarOuter.setPoint(3,{-3,2});
+    scarOuter.setPoint(4,{-5,-5}); scarOuter.setPoint(5,{-12,-10});
+    scarOuter.setPosition(hp); scarOuter.setFillColor(flash(sf::Color(185,65,50,180),fl)); w.draw(scarOuter);
+    // Inner scar tissue (pink/lighter)
+    sf::ConvexShape scarInner; scarInner.setPointCount(4);
+    scarInner.setPoint(0,{-14,-5}); scarInner.setPoint(1,{-10,1});
+    scarInner.setPoint(2,{-5,0}); scarInner.setPoint(3,{-9,-6});
+    scarInner.setPosition(hp); scarInner.setFillColor(flash(sf::Color(220,110,90,150),fl)); w.draw(scarInner);
+    // Scar affects left eye — make it slightly squinted
+    // Right eye (good eye) — large, intense gold
+    drawBigEye(w, hp.x+7+face*2, hp.y-2, 6.5f, 5, flash(sf::Color(200,155,10),fl));
+    // Left eye (scarred) — smaller, narrower
+    drawEllipse(w, hp.x-7+face*2, hp.y-1, 5, 3.5f, sf::Color(250,250,255), sf::Color(40,20,20), 1.f);
+    drawEllipse(w, hp.x-7+face*2, hp.y-0.5f, 3, 2.5f, flash(sf::Color(200,155,10),fl));
+    drawEllipse(w, hp.x-7+face*2, hp.y, 1.5f, 1.5f, sf::Color(15,10,10));
+
+    // Angry intense brows
     for(int i=-1;i<=1;i+=2)
-        drawBrow(w, hp.x+i*7, hp.y-9, 9, hair, i*-8.f);
-    // Zuko scar (left side = -1 facing)
-    sf::ConvexShape scar; scar.setPointCount(4);
-    scar.setPoint(0,{-13,-7}); scar.setPoint(1,{-6,-1}); scar.setPoint(2,{-4,1}); scar.setPoint(3,{-11,-4});
-    scar.setPosition(hp); scar.setFillColor(flash(sf::Color(200,80,60,200),fl)); w.draw(scar);
-    // Tight serious mouth
-    drawMouth(w, hp.x+face*3, hp.y+10, 8, false, sf::Color(110,50,40));
+        drawBrow(w, hp.x+i*7, hp.y-9, 10, hair, i*-10.f);
+
+    // Tight serious/angry mouth
+    drawMouth(w, hp.x+face*3, hp.y+11, 9, false, sf::Color(120,55,45));
     // Ears
     for(int i=-1;i<=1;i+=2)
-        drawEllipse(w, hp.x+i*(r-1), hp.y+2, 4, 5, skin);
+        drawEllipse(w, hp.x+i*(r), hp.y+2, 4, 5, skin);
 }
 
 void CartoonRenderer::drawWaterBenderHead(sf::RenderWindow& w, sf::Vector2f p, int face, float bob, float fl) {
     sf::Vector2f hp(p.x, p.y - 52 + bob);
-    float r = 18;
+    float r = 19;
     sf::Color skin = flash(bodyCol(Element::Water), fl);
-    sf::Color hairCol = flash(sf::Color(45,25,15), fl);
+    sf::Color hairCol = flash(sf::Color(40,22,12), fl);
+    sf::Color beadBlue = flash(sf::Color(45,125,215), fl);
 
-    // Hair back layer (thick volume)
-    drawEllipse(w, hp.x, hp.y+2, r+3, r+4, hairCol);
-    // Face
-    drawEllipse(w, hp.x, hp.y, r, r+1, skin, flash(sf::Color(100,70,45),fl), 2.f);
-    // Hair loopies — Katara's signature loops
+    // Thick voluminous hair behind head (dark brown)
+    drawEllipse(w, hp.x, hp.y+3, r+5, r+6, hairCol);
+    // Long flowing braids/hair tails hanging down
     for(int i=-1;i<=1;i+=2){
-        // Loop tube
-        drawEllipse(w, hp.x+i*(r+3), hp.y, 5, 8, hairCol);
-        // Blue Water Tribe bead
-        drawEllipse(w, hp.x+i*(r+3), hp.y+10, 3, 3, flash(sf::Color(50,130,220),fl));
+        sf::RectangleShape braid({4, 18}); braid.setOrigin(2, 0);
+        braid.setPosition(hp.x+i*(r-2), hp.y+r-2); braid.setRotation(i*5.f);
+        braid.setFillColor(hairCol); w.draw(braid);
+        // Braid tip bead
+        drawEllipse(w, hp.x+i*(r-1), hp.y+r+16, 2.5f, 2.5f, beadBlue);
     }
-    // Hair part line on top
-    sf::RectangleShape part({2, 10}); part.setOrigin(1,0);
-    part.setPosition(hp.x, hp.y-r); part.setFillColor(flash(sf::Color(30,15,10,140),fl)); w.draw(part);
 
-    // Eyes — blue, warm and kind
-    drawEyePair(w, hp.x, hp.y-2, 7, 6.5f, 5, flash(sf::Color(40,90,195),fl), face);
-    // Gentle brows
+    // Face — warm brown Water Tribe skin
+    drawEllipse(w, hp.x, hp.y, r, r+1, skin, flash(sf::Color(110,72,48),fl), 2.f);
+
+    // Hair loopies — Katara's signature hair loops, more prominent and curvy
+    for(int i=-1;i<=1;i+=2){
+        // Loop tube (thicker, curving outward then down)
+        drawEllipse(w, hp.x+i*(r+2), hp.y-4, 6, 10, hairCol);
+        // Inner loop hollow (to show loop shape)
+        drawEllipse(w, hp.x+i*(r+2), hp.y-3, 3, 6, skin);
+        // Blue Water Tribe bead at bottom of loop
+        drawEllipse(w, hp.x+i*(r+2), hp.y+8, 3.5f, 3.5f, beadBlue);
+        // Bead shine
+        drawEllipse(w, hp.x+i*(r+1), hp.y+7, 1.5f, 1.5f, sf::Color(140,200,255,140));
+    }
+    // Hair top with center part
+    drawEllipse(w, hp.x, hp.y-r+2, r-2, 6, hairCol);
+    sf::RectangleShape part({2, 12}); part.setOrigin(1,0);
+    part.setPosition(hp.x, hp.y-r-1); part.setFillColor(flash(sf::Color(25,12,8,140),fl)); w.draw(part);
+    // Fringe bangs swept to sides
+    for(int i=-1;i<=1;i+=2){
+        sf::ConvexShape bang; bang.setPointCount(4);
+        bang.setPoint(0,{0,-r+2}); bang.setPoint(1,{(float)(i*8),-r+6});
+        bang.setPoint(2,{(float)(i*12),-4}); bang.setPoint(3,{(float)(i*4),-6});
+        bang.setPosition(hp); bang.setFillColor(hairCol); w.draw(bang);
+    }
+
+    // Water Tribe necklace choker
+    sf::RectangleShape necklace({16, 2.5f}); necklace.setOrigin(8, 1.25f);
+    necklace.setPosition(hp.x, hp.y+r-2); necklace.setFillColor(flash(sf::Color(40,60,120),fl)); w.draw(necklace);
+    // Necklace pendant
+    drawEllipse(w, hp.x, hp.y+r, 3, 3.5f, beadBlue, flash(sf::Color(30,50,100),fl), 1.f);
+
+    // Big expressive blue eyes — warm and kind
+    drawEyePair(w, hp.x, hp.y-2, 7.5f, 6.5f, 5, flash(sf::Color(35,85,195),fl), face);
+    // Gentle arched brows
     for(int i=-1;i<=1;i+=2)
-        drawBrow(w, hp.x+i*7, hp.y-10, 9, hairCol, 0);
-    // Cheek blush
+        drawBrow(w, hp.x+i*7, hp.y-10, 9, hairCol, i*-3.f);
+    // Cheek blush — warm on brown skin
     for(int i=-1;i<=1;i+=2)
-        drawEllipse(w, hp.x+i*9, hp.y+5, 5, 3, sf::Color(220,140,110,90));
-    // Gentle smile
-    drawMouth(w, hp.x+face*2, hp.y+10, 7, true, sf::Color(140,70,60));
-    // Ears under hair
+        drawEllipse(w, hp.x+i*10, hp.y+5, 5.5f, 3, sf::Color(200,120,90,70));
+    // Gentle warm smile
+    drawMouth(w, hp.x+face*2, hp.y+10, 7, true, sf::Color(130,65,55));
+    // Ears peeking from hair
     for(int i=-1;i<=1;i+=2)
         drawEllipse(w, hp.x+i*(r-1), hp.y+2, 4, 5, skin);
 }
 
 void CartoonRenderer::drawEarthBenderHead(sf::RenderWindow& w, sf::Vector2f p, int face, float bob, float fl) {
-    sf::Vector2f hp(p.x, p.y - 50 + bob);
-    float r = 20;
+    sf::Vector2f hp(p.x, p.y - 51 + bob);
+    float r = 19;
     sf::Color skin = flash(bodyCol(Element::Earth), fl);
-    sf::Color hairCol = flash(sf::Color(25,18,10), fl);
+    sf::Color hairCol = flash(sf::Color(18,14,8), fl);
 
-    // Broad stocky hair cap
-    sf::ConvexShape hair; hair.setPointCount(4);
-    hair.setPoint(0,{-r-2, 2}); hair.setPoint(1,{-r+4, -r-3}); hair.setPoint(2,{r-4,-r-3}); hair.setPoint(3,{r+2,2});
-    hair.setPosition(hp); hair.setFillColor(hairCol); w.draw(hair);
-    // Face (slightly angular = hex)
-    sf::CircleShape h(r, 8); h.setOrigin(r,r); h.setPosition(hp);
-    h.setFillColor(skin); h.setOutlineThickness(2); h.setOutlineColor(flash(sf::Color(150,120,80),fl)); w.draw(h);
+    // Large black hair bun on top of head — Toph's signature
+    drawEllipse(w, hp.x, hp.y-r-6, 10, 9, hairCol);
+    // Bun band (green tie)
+    sf::RectangleShape bunBand({14, 3}); bunBand.setOrigin(7, 1.5f);
+    bunBand.setPosition(hp.x, hp.y-r-1); bunBand.setFillColor(flash(sf::Color(45,130,40),fl)); w.draw(bunBand);
+
+    // Thick hair framing face (bangs swept across forehead)
+    sf::ConvexShape bangs; bangs.setPointCount(6);
+    bangs.setPoint(0,{-r-1, 0}); bangs.setPoint(1,{-r+2, -r+2});
+    bangs.setPoint(2,{-4, -r-2}); bangs.setPoint(3,{6, -r-2});
+    bangs.setPoint(4,{r-2, -r+4}); bangs.setPoint(5,{r+1, 0});
+    bangs.setPosition(hp); bangs.setFillColor(hairCol); w.draw(bangs);
+    // Side hair strands hanging down
+    for(int i=-1;i<=1;i+=2){
+        sf::RectangleShape strand({4, 14}); strand.setOrigin(2, 0);
+        strand.setPosition(hp.x+i*(r+1), hp.y-4); strand.setRotation(i*3.f);
+        strand.setFillColor(hairCol); w.draw(strand);
+    }
+
+    // Face — rounder, younger looking
+    drawEllipse(w, hp.x, hp.y, r, r+1, skin, flash(sf::Color(180,150,110),fl), 2.f);
+
     // Green Earth Kingdom headband
-    sf::RectangleShape hb({r*2+6, 6}); hb.setOrigin(r+3, 3); hb.setPosition(hp.x, hp.y-8);
-    hb.setFillColor(flash(sf::Color(40,140,40),fl)); w.draw(hb);
-    // Headband small knot/bow
-    drawEllipse(w, hp.x-r-1, hp.y-8, 4, 3, flash(sf::Color(30,100,30),fl));
+    sf::RectangleShape hb({r*2+4, 5}); hb.setOrigin(r+2, 2.5f); hb.setPosition(hp.x, hp.y-r+5);
+    hb.setFillColor(flash(sf::Color(45,135,40),fl)); w.draw(hb);
+    // Headband gold emblem center
+    drawEllipse(w, hp.x, hp.y-r+5, 3.5f, 3.5f, flash(sf::Color(200,180,60),fl));
 
-    // Eyes — green, sturdy
-    drawEyePair(w, hp.x, hp.y-1, 7, 6, 4, flash(sf::Color(70,150,45),fl), face);
-    // Heavy strong brows
+    // BLIND WHITE EYES — Toph's signature! No irises, just pale milky white
+    for(int i=-1;i<=1;i+=2){
+        float ex = hp.x + i*7 + face*2;
+        float ey = hp.y - 1;
+        // Sclera (slightly off-white, milky)
+        drawEllipse(w, ex, ey, 6.5f, 5, sf::Color(235,240,240), sf::Color(40,20,20), 1.2f);
+        // Very faint iris hint (pale grey-green, barely visible)
+        drawEllipse(w, ex, ey+0.5f, 4, 3.5f, sf::Color(210,220,215,120));
+        // No pupil! Just a subtle pale center
+        drawEllipse(w, ex, ey+1, 2, 2, sf::Color(225,230,228,100));
+        // Catchlight (dimmer since blind)
+        sf::CircleShape hl(1.5f); hl.setOrigin(1.5f, 1.5f);
+        hl.setPosition(ex-1.5f, ey-2); hl.setFillColor(sf::Color(255,255,255,100)); w.draw(hl);
+        // Top eyelid line
+        sf::RectangleShape lid({14.f, 1.5f}); lid.setOrigin(7, 0.75f);
+        lid.setPosition(ex, ey-4.5f); lid.setFillColor(sf::Color(30,15,15,180)); w.draw(lid);
+    }
+
+    // Confident/smug brows (slightly raised)
     for(int i=-1;i<=1;i+=2)
-        drawBrow(w, hp.x+i*7, hp.y-9, 10, hairCol, i*-5.f);
-    // Determined flat mouth
-    drawMouth(w, hp.x+face*2, hp.y+11, 9, false, sf::Color(110,65,50));
-    // Wide jaw ears
+        drawBrow(w, hp.x+i*7, hp.y-9, 10, hairCol, i*-4.f);
+    // Smug confident smirk
+    drawMouth(w, hp.x+face*2, hp.y+11, 8, false, sf::Color(160,95,75));
+    // One corner turned up (smirk)
+    sf::RectangleShape smirk({3, 1.5f}); smirk.setOrigin(0, 0.75f);
+    smirk.setPosition(hp.x+face*6, hp.y+10.5f); smirk.setRotation(face*-20.f);
+    smirk.setFillColor(sf::Color(160,95,75)); w.draw(smirk);
+    // Ears
     for(int i=-1;i<=1;i+=2)
-        drawEllipse(w, hp.x+i*(r-1), hp.y+3, 5, 6, skin, flash(sf::Color(150,120,80),fl), 1.f);
+        drawEllipse(w, hp.x+i*(r-1), hp.y+3, 4.5f, 5.5f, skin);
 }
 
 void CartoonRenderer::drawMetalBenderHead(sf::RenderWindow& w, sf::Vector2f p, int face, float bob, float fl) {
     sf::Vector2f hp(p.x, p.y - 52 + bob);
-    float r = 18;
-    // Full metal helmet
+    float r = 19;
+    sf::Color grey = flash(sf::Color(160,160,170), fl);
+
+    // Grey hair peeking out from under helmet
+    drawEllipse(w, hp.x, hp.y+4, r-2, 8, flash(sf::Color(140,140,150),fl));
+    for(int i=-1;i<=1;i+=2){
+        sf::RectangleShape strand({3, 10}); strand.setOrigin(1.5f, 0);
+        strand.setPosition(hp.x+i*(r-4), hp.y+2); strand.setRotation(i*8.f);
+        strand.setFillColor(flash(sf::Color(130,130,145),fl)); w.draw(strand);
+    }
+
+    // Angular metal helmet (octagonal)
     sf::CircleShape helm(r+2, 8); helm.setOrigin(r+2,r+2); helm.setPosition(hp);
-    helm.setFillColor(flash(sf::Color(135,135,150),fl));
-    helm.setOutlineThickness(2); helm.setOutlineColor(flash(sf::Color(80,80,95),fl)); w.draw(helm);
-    // Helmet ridge on top
-    sf::RectangleShape ridge({8, 6}); ridge.setOrigin(4,6); ridge.setPosition(hp.x, hp.y-r-1);
-    ridge.setFillColor(flash(sf::Color(100,100,115),fl)); w.draw(ridge);
-    // Visor — glowing teal
-    sf::RectangleShape visor({r*1.7f, 8}); visor.setOrigin(r*.85f, 4); visor.setPosition(hp.x+face*2, hp.y-2);
-    visor.setFillColor(flash(sf::Color(140,210,230,210),fl)); w.draw(visor);
+    helm.setFillColor(flash(sf::Color(130,135,145),fl));
+    helm.setOutlineThickness(2.5f); helm.setOutlineColor(flash(sf::Color(70,75,85),fl)); w.draw(helm);
+    // Helmet crest ridge on top
+    sf::ConvexShape crest; crest.setPointCount(4);
+    crest.setPoint(0,{-5,0}); crest.setPoint(1,{-3,-8}); crest.setPoint(2,{3,-8}); crest.setPoint(3,{5,0});
+    crest.setPosition(hp.x, hp.y-r-1); crest.setFillColor(flash(sf::Color(100,105,115),fl)); w.draw(crest);
+    // Forehead plate detail
+    sf::RectangleShape fplate({r*1.4f, 3}); fplate.setOrigin(r*0.7f, 1.5f);
+    fplate.setPosition(hp.x, hp.y-r+6); fplate.setFillColor(flash(sf::Color(110,110,125),fl)); w.draw(fplate);
+
+    // Visor — glowing green-teal (Earth Kingdom metal)
+    sf::RectangleShape visor({r*1.8f, 9}); visor.setOrigin(r*.9f, 4.5f); visor.setPosition(hp.x+face*2, hp.y-2);
+    visor.setFillColor(flash(sf::Color(120,210,180,210),fl)); w.draw(visor);
     // Visor glow line
-    sf::RectangleShape vgl({r*1.7f, 2}); vgl.setOrigin(r*.85f, 1); vgl.setPosition(hp.x+face*2, hp.y-4);
-    vgl.setFillColor(flash(sf::Color(200,240,255,120),fl)); w.draw(vgl);
-    // Rivets
-    for(int i=-1;i<=1;i+=2)
-        drawEllipse(w, hp.x+i*14, hp.y+10, 2, 2, flash(sf::Color(90,90,100),fl));
-    // Chin guard
-    sf::RectangleShape chin({18,6}); chin.setOrigin(9,0); chin.setPosition(hp.x,hp.y+r-5);
-    chin.setFillColor(flash(sf::Color(120,120,135),fl)); w.draw(chin);
+    sf::RectangleShape vgl({r*1.8f, 2}); vgl.setOrigin(r*.9f, 1); vgl.setPosition(hp.x+face*2, hp.y-5);
+    vgl.setFillColor(flash(sf::Color(180,245,220,120),fl)); w.draw(vgl);
+    // Visor bottom edge
+    sf::RectangleShape vbl({r*1.8f, 1.5f}); vbl.setOrigin(r*.9f, 0.75f); vbl.setPosition(hp.x+face*2, hp.y+2.5f);
+    vbl.setFillColor(flash(sf::Color(60,65,75),fl)); w.draw(vbl);
+
+    // Rivets (4 total)
+    for(int i=-1;i<=1;i+=2){
+        drawEllipse(w, hp.x+i*15, hp.y+10, 2.5f, 2.5f, flash(sf::Color(85,85,95),fl));
+        drawEllipse(w, hp.x+i*12, hp.y-10, 2, 2, flash(sf::Color(85,85,95),fl));
+    }
+    // Cheek plates
+    for(int i=-1;i<=1;i+=2){
+        sf::RectangleShape cp({8, 10}); cp.setOrigin(4, 5);
+        cp.setPosition(hp.x+i*14, hp.y+5); cp.setFillColor(flash(sf::Color(115,118,128),fl)); w.draw(cp);
+    }
+    // Chin guard (more angular)
+    sf::ConvexShape chin; chin.setPointCount(4);
+    chin.setPoint(0,{-10,0}); chin.setPoint(1,{-6,8}); chin.setPoint(2,{6,8}); chin.setPoint(3,{10,0});
+    chin.setPosition(hp.x, hp.y+r-6); chin.setFillColor(flash(sf::Color(115,118,130),fl)); w.draw(chin);
+    // Wrinkle lines near mouth (older Toph)
+    for(int i=-1;i<=1;i+=2){
+        sf::RectangleShape wrinkle({4, 1}); wrinkle.setOrigin(2, 0.5f);
+        wrinkle.setPosition(hp.x+i*8, hp.y+r-2); wrinkle.setFillColor(sf::Color(90,90,100,80)); w.draw(wrinkle);
+    }
 }
 
 void CartoonRenderer::drawLightningBenderHead(sf::RenderWindow& w, sf::Vector2f p, int face, float bob, float fl) {
     sf::Vector2f hp(p.x, p.y - 52 + bob);
     float r = 18;
     sf::Color skin = flash(bodyCol(Element::Lightning), fl);
-    sf::Color hairCol = flash(sf::Color(100,50,180), fl);
+    sf::Color hairCol = flash(sf::Color(15,10,8), fl); // Black hair, not purple
 
-    // Base face
-    drawEllipse(w, hp.x, hp.y, r, r+1, skin, flash(sf::Color(120,80,180),fl), 2.f);
-    // Purple electric spiky hair
-    for(int i=-2;i<=2;i++){
-        float sx = i*7.f, sh = (i==0)?22:(std::abs(i)==1?17:12);
-        drawSpike(w, hp.x+sx, hp.y-r+2, hp.x+sx+i*2.f, hp.y-r-sh, 4, hairCol);
-    }
-    // Electric cheek marks
+    // Azula's sharp topknot with red/gold tie
+    sf::ConvexShape topknot; topknot.setPointCount(5);
+    topknot.setPoint(0,{-6,-4}); topknot.setPoint(1,{-4,-r-10});
+    topknot.setPoint(2,{0,-r-16}); topknot.setPoint(3,{4,-r-10}); topknot.setPoint(4,{6,-4});
+    topknot.setPosition(hp); topknot.setFillColor(hairCol); w.draw(topknot);
+    // Gold topknot ring
+    sf::RectangleShape tring({8, 2.5f}); tring.setOrigin(4, 1.25f);
+    tring.setPosition(hp.x, hp.y-r-6); tring.setFillColor(flash(sf::Color(255,200,40),fl)); w.draw(tring);
+
+    // Sharp straight bangs framing face — two angular pieces
     for(int i=-1;i<=1;i+=2){
-        sf::ConvexShape bolt; bolt.setPointCount(4);
-        bolt.setPoint(0,{0,-5}); bolt.setPoint(1,{(float)(i*4),-1}); bolt.setPoint(2,{(float)(i*2),2}); bolt.setPoint(3,{(float)(i*5),6});
-        bolt.setPosition(hp.x+i*13, hp.y+2);
-        bolt.setFillColor(flash(sf::Color(255,245,80,190),fl)); w.draw(bolt);
+        sf::ConvexShape bang; bang.setPointCount(5);
+        bang.setPoint(0,{(float)(i*3),-r+2}); bang.setPoint(1,{(float)(i*(r-2)),-r+4});
+        bang.setPoint(2,{(float)(i*(r+3)),-2}); bang.setPoint(3,{(float)(i*(r+1)),6});
+        bang.setPoint(4,{(float)(i*6),2});
+        bang.setPosition(hp); bang.setFillColor(hairCol); w.draw(bang);
     }
-    // Eyes — purple/violet
-    drawEyePair(w, hp.x, hp.y-2, 7, 6, 4, flash(sf::Color(160,80,240),fl), face);
+    // Top hair volume
+    drawEllipse(w, hp.x, hp.y-r+2, r-2, 5, hairCol);
+
+    // Face — angular, sharp, porcelain skin
+    sf::CircleShape faceShape(r, 6); // hexagonal = sharp jawline
+    faceShape.setOrigin(r,r); faceShape.setPosition(hp);
+    faceShape.setFillColor(skin); faceShape.setOutlineThickness(2);
+    faceShape.setOutlineColor(flash(sf::Color(180,150,110),fl)); w.draw(faceShape);
+
+    // Fire Nation crown piece — smaller, more elegant than Zuko's
+    sf::ConvexShape crown; crown.setPointCount(5);
+    crown.setPoint(0,{-6,-r-3}); crown.setPoint(1,{-3,-r-7});
+    crown.setPoint(2,{0,-r-9}); crown.setPoint(3,{3,-r-7}); crown.setPoint(4,{6,-r-3});
+    crown.setPosition(hp); crown.setFillColor(flash(sf::Color(255,195,30),fl)); w.draw(crown);
+
+    // Sharp eyeliner (red/dark) around eyes
+    for(int i=-1;i<=1;i+=2){
+        sf::RectangleShape liner({10, 1.5f}); liner.setOrigin(5, 0.75f);
+        liner.setPosition(hp.x+i*7+face*2, hp.y-4); liner.setRotation(i*-5.f);
+        liner.setFillColor(flash(sf::Color(120,20,30,180),fl)); w.draw(liner);
+    }
+    // Gold/amber eyes — cold, calculating
+    drawEyePair(w, hp.x, hp.y-2, 7, 5.5f, 4.5f, flash(sf::Color(210,165,15),fl), face);
+    // Sharp thin angular brows
     for(int i=-1;i<=1;i+=2)
-        drawBrow(w, hp.x+i*7, hp.y-9, 8, hairCol, i*-6.f);
-    drawMouth(w, hp.x+face*3, hp.y+10, 7, false, sf::Color(90,50,70));
+        drawBrow(w, hp.x+i*7, hp.y-9, 9, hairCol, i*-8.f);
+    // Cruel smirk
+    drawMouth(w, hp.x+face*3, hp.y+10, 7, false, sf::Color(160,50,55));
+    // Smirk corner
+    sf::RectangleShape smirk({3, 1.5f}); smirk.setOrigin(0, 0.75f);
+    smirk.setPosition(hp.x+face*6, hp.y+9.5f); smirk.setRotation(face*-18.f);
+    smirk.setFillColor(sf::Color(160,50,55)); w.draw(smirk);
+    // Red lipstick hint
+    drawEllipse(w, hp.x+face*1, hp.y+10, 4, 2, sf::Color(180,55,55,80));
+    // Ears
     for(int i=-1;i<=1;i+=2)
         drawEllipse(w, hp.x+i*(r-1), hp.y+2, 4, 5, skin);
 }
 
 void CartoonRenderer::drawPlantBenderHead(sf::RenderWindow& w, sf::Vector2f p, int face, float bob, float fl) {
     sf::Vector2f hp(p.x, p.y - 52 + bob);
-    float r = 17;
-    sf::Color skin = flash(bodyCol(Element::Earth), fl);
+    float r = 18;
+    sf::Color skin = flash(bodyCol(Element::Plant), fl);
 
-    // Swamp hat (wide lily pad shape)
-    drawEllipse(w, hp.x, hp.y-r-3, r+6, 5, flash(sf::Color(55,130,45),fl), flash(sf::Color(30,80,20),fl), 2.f);
-    // Hat stem
-    sf::RectangleShape stem({4,8}); stem.setOrigin(2,8); stem.setPosition(hp.x,hp.y-r-2);
-    stem.setFillColor(flash(sf::Color(40,100,30),fl)); w.draw(stem);
+    // Wide swamp leaf hat (layered lily pad)
+    drawEllipse(w, hp.x, hp.y-r-4, r+8, 6, flash(sf::Color(50,125,40),fl), flash(sf::Color(28,75,18),fl), 2.f);
+    drawEllipse(w, hp.x, hp.y-r-2, r+4, 4, flash(sf::Color(60,140,48),fl));
+    // Hat stem/stalk on top
+    sf::RectangleShape stem({5,10}); stem.setOrigin(2.5f,10); stem.setPosition(hp.x,hp.y-r-3);
+    stem.setFillColor(flash(sf::Color(38,95,28),fl)); w.draw(stem);
+    // Small leaf on stem top
+    drawEllipse(w, hp.x+2, hp.y-r-12, 4, 3, flash(sf::Color(55,140,40),fl));
+
     // Face
-    drawEllipse(w, hp.x, hp.y, r, r+1, skin, flash(sf::Color(100,80,50),fl), 2.f);
-    // Vine mask across eyes
-    sf::RectangleShape mask({r*2-2, 5}); mask.setOrigin(r-1, 2.5f); mask.setPosition(hp.x, hp.y-3);
-    mask.setFillColor(flash(sf::Color(38,98,28),fl)); w.draw(mask);
-    // Glowing green eyes through mask
-    for(int i=-1;i<=1;i+=2)
-        drawEllipse(w, hp.x+i*6+face*1.5f, hp.y-3, 3, 3, flash(sf::Color(120,255,80),fl));
-    // Vine tendrils hanging
-    for(int i=-1;i<=1;i+=2){
-        sf::RectangleShape vine({2, 8+std::abs(i)*3}); vine.setOrigin(1, 0);
-        vine.setPosition(hp.x+i*6, hp.y-r-2);
-        vine.setFillColor(flash(sf::Color(45,120,35),fl)); w.draw(vine);
+    drawEllipse(w, hp.x, hp.y, r, r+1, skin, flash(sf::Color(120,95,60),fl), 2.f);
+
+    // Thick vine mask covering upper face
+    sf::ConvexShape mask; mask.setPointCount(6);
+    mask.setPoint(0,{-r+2,-8}); mask.setPoint(1,{-r+4,-2}); mask.setPoint(2,{-r+2,4});
+    mask.setPoint(3,{r-2,4}); mask.setPoint(4,{r-4,-2}); mask.setPoint(5,{r-2,-8});
+    mask.setPosition(hp); mask.setFillColor(flash(sf::Color(35,92,25),fl)); w.draw(mask);
+    // Vine texture lines on mask
+    for(int i=0;i<3;i++){
+        sf::RectangleShape vl({r*1.6f, 1.5f}); vl.setOrigin(r*0.8f, 0.75f);
+        vl.setPosition(hp.x, hp.y-6+i*4);
+        vl.setFillColor(flash(sf::Color(28,70,18,120),fl)); w.draw(vl);
     }
-    drawMouth(w, hp.x, hp.y+10, 7, false, sf::Color(80,60,40));
+
+    // Bright glowing green eyes through mask
+    for(int i=-1;i<=1;i+=2){
+        // Glow halo
+        drawEllipse(w, hp.x+i*7+face*1.5f, hp.y-3, 5, 4.5f, sf::Color(80,255,60,50));
+        // Eye
+        drawEllipse(w, hp.x+i*7+face*1.5f, hp.y-3, 3.5f, 3, flash(sf::Color(100,255,70),fl));
+        // Bright center
+        drawEllipse(w, hp.x+i*7+face*1.5f, hp.y-3, 1.5f, 1.5f, sf::Color(200,255,180));
+    }
+
+    // Vine tendrils hanging from hat/mask
+    for(int i=-2;i<=2;i++){
+        float vx = hp.x + i*6.f;
+        float vlen = 10.f + std::abs(i)*3.f;
+        sf::RectangleShape vine({2.5f, vlen}); vine.setOrigin(1.25f, 0);
+        vine.setPosition(vx, hp.y-r-2); vine.setRotation(i*4.f);
+        vine.setFillColor(flash(sf::Color(42,115,32),fl)); w.draw(vine);
+    }
+
+    // Mossy beard/chin area
+    for(int i=-1;i<=1;i++){
+        drawEllipse(w, hp.x+i*5, hp.y+r-4, 5, 4, flash(sf::Color(55,100,35,160),fl));
+    }
+    // Mouth — barely visible through vines
+    drawMouth(w, hp.x, hp.y+10, 7, false, sf::Color(90,65,45));
 }
 
 void CartoonRenderer::drawIceBenderHead(sf::RenderWindow& w, sf::Vector2f p, int face, float bob, float fl) {
     sf::Vector2f hp(p.x, p.y - 52 + bob);
-    float r = 18;
-    sf::Color skin = flash(bodyCol(Element::Water), fl);
-    sf::Color fur = flash(sf::Color(235,235,250),fl);
+    float r = 19;
+    sf::Color skin = flash(bodyCol(Element::Ice), fl); // Brown Water Tribe skin
+    sf::Color fur = flash(sf::Color(230,230,245),fl);
+    sf::Color parkaBlue = flash(sf::Color(30,45,65),fl);
 
-    // Fur-lined parka hood (outer)
-    drawEllipse(w, hp.x, hp.y-2, r+5, r+5, fur, flash(sf::Color(180,200,230),fl), 2.f);
-    // Inner hood dark
-    drawEllipse(w, hp.x, hp.y, r+1, r+1, flash(sf::Color(30,40,60),fl));
-    // Face oval exposed
-    drawEllipse(w, hp.x, hp.y+2, r-5, r-3, skin);
-    // Ice blue warpaint
+    // Fur-lined parka hood (outer ring)
+    drawEllipse(w, hp.x, hp.y-2, r+6, r+6, fur, flash(sf::Color(190,200,220),fl), 2.f);
+    // Inner hood (dark blue parka)
+    drawEllipse(w, hp.x, hp.y, r+2, r+2, parkaBlue);
+
+    // Wolf-tail hair on top (shaved sides, ponytail pulled back)
+    sf::Color hairCol = flash(sf::Color(35,20,12),fl);
+    // Hair top strip (mohawk-like leading to ponytail)
+    sf::ConvexShape hairTop; hairTop.setPointCount(4);
+    hairTop.setPoint(0,{-8,-r+3}); hairTop.setPoint(1,{-4,-r-4});
+    hairTop.setPoint(2,{4,-r-4}); hairTop.setPoint(3,{8,-r+3});
+    hairTop.setPosition(hp); hairTop.setFillColor(hairCol); w.draw(hairTop);
+    // Wolf-tail ponytail going back
+    sf::RectangleShape ponytail({4, 16}); ponytail.setOrigin(2, 0);
+    ponytail.setPosition(hp.x-face*3, hp.y-r-2); ponytail.setRotation(-face*20.f);
+    ponytail.setFillColor(hairCol); w.draw(ponytail);
+    // Ponytail tie
+    sf::RectangleShape tie({6, 2.5f}); tie.setOrigin(3, 1.25f);
+    tie.setPosition(hp.x-face*3, hp.y-r-1); tie.setFillColor(flash(sf::Color(50,100,180),fl)); w.draw(tie);
+
+    // Face (brown skin, exposed from hood)
+    drawEllipse(w, hp.x, hp.y+2, r-4, r-2, skin);
+
+    // Blue war paint streaks on cheeks — Sokka's warrior look
     for(int i=-1;i<=1;i+=2){
-        sf::RectangleShape wp({6,2}); wp.setOrigin(3,1);
-        wp.setPosition(hp.x+i*5, hp.y+5); wp.setRotation(i*-10.f);
-        wp.setFillColor(flash(sf::Color(80,200,255),fl)); w.draw(wp);
+        // Diagonal streak
+        sf::RectangleShape wp({7, 2.5f}); wp.setOrigin(3.5f, 1.25f);
+        wp.setPosition(hp.x+i*6, hp.y+5); wp.setRotation(i*-12.f);
+        wp.setFillColor(flash(sf::Color(70,180,245),fl)); w.draw(wp);
+        // Second smaller streak below
+        sf::RectangleShape wp2({5, 2}); wp2.setOrigin(2.5f, 1);
+        wp2.setPosition(hp.x+i*5, hp.y+8); wp2.setRotation(i*-8.f);
+        wp2.setFillColor(flash(sf::Color(70,180,245),fl)); w.draw(wp2);
     }
-    // Eyes — dark, determined
-    drawEyePair(w, hp.x, hp.y+1, 5, 5, 3.5f, flash(sf::Color(30,30,45),fl), face);
+
+    // Eyes — dark blue-brown, confident and sharp
+    drawEyePair(w, hp.x, hp.y+1, 6, 5.5f, 4, flash(sf::Color(35,45,70),fl), face);
+    // Confident raised brows
     for(int i=-1;i<=1;i+=2)
-        drawBrow(w, hp.x+i*5, hp.y-6, 7, flash(sf::Color(20,20,30),fl), 0);
-    drawMouth(w, hp.x+face*2, hp.y+10, 6, false, sf::Color(100,70,60));
+        drawBrow(w, hp.x+i*6, hp.y-5, 8, flash(sf::Color(25,15,10),fl), i*-5.f);
+    // Confident smirk
+    drawMouth(w, hp.x+face*2, hp.y+11, 7, false, sf::Color(110,70,55));
+    sf::RectangleShape smirk({3, 1.5f}); smirk.setOrigin(0, 0.75f);
+    smirk.setPosition(hp.x+face*5, hp.y+10.5f); smirk.setRotation(face*-15.f);
+    smirk.setFillColor(sf::Color(110,70,55)); w.draw(smirk);
 }
 
 void CartoonRenderer::drawSwordBenderHead(sf::RenderWindow& w, sf::Vector2f p, int face, float bob, float fl) {
     sf::Vector2f hp(p.x, p.y - 52 + bob);
     float r = 18;
-    sf::Color skin = flash(bodyCol(Element::Water), fl);
-    sf::Color hairCol = flash(sf::Color(35,22,12), fl);
+    sf::Color skin = flash(bodyCol(Element::Sword), fl);
+    sf::Color hairCol = flash(sf::Color(30,18,10), fl);
 
-    // Shaved-sides wolf tail hair top
-    sf::ConvexShape hair; hair.setPointCount(4);
-    hair.setPoint(0,{-r,2}); hair.setPoint(1,{-r+4,-r-2}); hair.setPoint(2,{r-4,-r-2}); hair.setPoint(3,{r,2});
+    // Sleek samurai hair — swept back, angular
+    sf::ConvexShape hair; hair.setPointCount(5);
+    hair.setPoint(0,{-r-1,2}); hair.setPoint(1,{-r+2,-r}); hair.setPoint(2,{0,-r-4});
+    hair.setPoint(3,{r-2,-r}); hair.setPoint(4,{r+1,2});
     hair.setPosition(hp); hair.setFillColor(hairCol); w.draw(hair);
-    // Face
-    drawEllipse(w, hp.x, hp.y, r, r+1, skin, flash(sf::Color(100,70,45),fl), 2.f);
-    // Wolf tail top knot (to the side)
-    drawEllipse(w, hp.x + face*(-r+4), hp.y-r+2, 7, 7, hairCol);
-    // Wolf tail strand
-    sf::RectangleShape tail({3,14}); tail.setOrigin(1.5f,0);
-    tail.setPosition(hp.x+face*(-r+4), hp.y-r+6); tail.setRotation(face*15.f);
-    tail.setFillColor(hairCol); w.draw(tail);
 
-    // Eyes — cool blue-grey, confident
-    drawEyePair(w, hp.x, hp.y-2, 7, 6, 4, flash(sf::Color(60,100,160),fl), face);
+    // Face — angular, warrior look
+    drawEllipse(w, hp.x, hp.y, r, r+1, skin, flash(sf::Color(160,130,95),fl), 2.f);
+
+    // Short ponytail at back (samurai style)
+    sf::RectangleShape tail({4,12}); tail.setOrigin(2,0);
+    tail.setPosition(hp.x-face*(r-6), hp.y-r+4); tail.setRotation(-face*18.f);
+    tail.setFillColor(hairCol); w.draw(tail);
+    // Ponytail tie
+    sf::RectangleShape ptie({6, 2}); ptie.setOrigin(3, 1);
+    ptie.setPosition(hp.x-face*(r-6), hp.y-r+5); ptie.setFillColor(flash(sf::Color(80,80,90),fl)); w.draw(ptie);
+
+    // Headband — thin dark steel
+    sf::RectangleShape hband({r*2+8, 4}); hband.setOrigin(r+4, 2);
+    hband.setPosition(hp.x, hp.y-r+7); hband.setFillColor(flash(sf::Color(70,75,85),fl)); w.draw(hband);
+    // Headband knot on side
+    drawEllipse(w, hp.x+face*(r+2), hp.y-r+7, 3, 3, flash(sf::Color(60,65,75),fl));
+    // Headband tails
+    sf::RectangleShape htail({2, 8}); htail.setOrigin(1, 0);
+    htail.setPosition(hp.x+face*(r+3), hp.y-r+8); htail.setRotation(face*10.f);
+    htail.setFillColor(flash(sf::Color(70,75,85),fl)); w.draw(htail);
+
+    // Eyes — sharp steel-blue, focused
+    drawEyePair(w, hp.x, hp.y-2, 7, 5.5f, 4, flash(sf::Color(55,90,145),fl), face);
+    // Determined angular brows
     for(int i=-1;i<=1;i+=2)
-        drawBrow(w, hp.x+i*7, hp.y-9, 9, hairCol, i*-6.f);
-    // Smirk
-    drawMouth(w, hp.x+face*3, hp.y+10, 7, false, sf::Color(100,55,50));
-    sf::RectangleShape smirk({3,1.5f}); smirk.setOrigin(0,0.75f);
-    smirk.setPosition(hp.x+face*3+face*2, hp.y+9); smirk.setRotation(face*-15.f);
-    smirk.setFillColor(sf::Color(100,55,50)); w.draw(smirk);
+        drawBrow(w, hp.x+i*7, hp.y-9, 10, hairCol, i*-7.f);
+    // Thin determined mouth
+    drawMouth(w, hp.x+face*3, hp.y+10, 8, false, sf::Color(110,60,50));
+    // Ears
     for(int i=-1;i<=1;i+=2)
         drawEllipse(w, hp.x+i*(r-1), hp.y+2, 4, 5, skin);
 }
@@ -511,35 +768,74 @@ void CartoonRenderer::drawSwordBenderHead(sf::RenderWindow& w, sf::Vector2f p, i
 void CartoonRenderer::drawFanBenderHead(sf::RenderWindow& w, sf::Vector2f p, int face, float bob, float fl) {
     sf::Vector2f hp(p.x, p.y - 52 + bob);
     float r = 18;
-    sf::Color skin = flash(sf::Color(250,245,240),fl); // Kyoshi white foundation
+    sf::Color skin = flash(sf::Color(248,243,236),fl); // Kyoshi white foundation
+    sf::Color hairCol = flash(sf::Color(20,12,8), fl);
 
-    // Big elaborate hair updo
-    drawEllipse(w, hp.x, hp.y-r-4, r, 8, flash(sf::Color(25,15,10),fl));
-    // Face with white foundation
-    drawEllipse(w, hp.x, hp.y, r, r+1, skin, flash(sf::Color(200,185,180),fl), 2.f);
-    // Green eye shadow makeup band
-    sf::RectangleShape eyeband({r*2-2, 8}); eyeband.setOrigin(r-1, 4); eyeband.setPosition(hp.x, hp.y-4);
-    eyeband.setFillColor(flash(sf::Color(0,100,60,160),fl)); w.draw(eyeband);
-    // Kyoshi red eye shadow
-    sf::RectangleShape red1({r-4, 6}); red1.setOrigin((r-4)/2, 3);
-    red1.setPosition(hp.x+face*4, hp.y-4);
-    red1.setFillColor(flash(sf::Color(180,40,40,180),fl)); w.draw(red1);
-    // Eyes — amber/green
-    drawEyePair(w, hp.x, hp.y-3, 7, 6, 4.5f, flash(sf::Color(160,110,0),fl), face);
-    // Bold brows
+    // Elaborate hair updo (tall, structured)
+    drawEllipse(w, hp.x, hp.y-r-8, 11, 10, hairCol);
+    // Side hair buns/ornaments
     for(int i=-1;i<=1;i+=2)
-        drawBrow(w, hp.x+i*7, hp.y-11, 9, flash(sf::Color(25,15,10),fl), 0);
-    // Red bold lips
-    drawEllipse(w, hp.x+face*1.5f, hp.y+10, 5, 3, sf::Color(160,30,30));
-    // Gold headdress
-    sf::ConvexShape hd; hd.setPointCount(5);
-    hd.setPoint(0,{-12,-r-2}); hd.setPoint(1,{-6,-r-10}); hd.setPoint(2,{0,-r-14});
-    hd.setPoint(3,{6,-r-10}); hd.setPoint(4,{12,-r-2});
+        drawEllipse(w, hp.x+i*12, hp.y-r+2, 6, 6, hairCol);
+    // Hair framing face
+    for(int i=-1;i<=1;i+=2){
+        sf::ConvexShape sideHair; sideHair.setPointCount(4);
+        sideHair.setPoint(0,{(float)(i*(r-4)),-r+2}); sideHair.setPoint(1,{(float)(i*(r+2)),-4});
+        sideHair.setPoint(2,{(float)(i*(r+1)),6}); sideHair.setPoint(3,{(float)(i*(r-2)),4});
+        sideHair.setPosition(hp); sideHair.setFillColor(hairCol); w.draw(sideHair);
+    }
+
+    // Face with white foundation paint
+    drawEllipse(w, hp.x, hp.y, r, r+1, skin, flash(sf::Color(195,185,175),fl), 2.f);
+
+    // Bold green eye shadow band — extending from eye to temple (Kyoshi signature)
+    for(int i=-1;i<=1;i+=2){
+        sf::ConvexShape eyeShadow; eyeShadow.setPointCount(5);
+        eyeShadow.setPoint(0,{(float)(i*2),-7}); eyeShadow.setPoint(1,{(float)(i*14),-8});
+        eyeShadow.setPoint(2,{(float)(i*16),-2}); eyeShadow.setPoint(3,{(float)(i*14),2});
+        eyeShadow.setPoint(4,{(float)(i*2),0});
+        eyeShadow.setPosition(hp); eyeShadow.setFillColor(flash(sf::Color(15,90,50,180),fl)); w.draw(eyeShadow);
+    }
+
+    // Red accent under each eye shadow
+    for(int i=-1;i<=1;i+=2){
+        sf::RectangleShape redAccent({12, 2.5f}); redAccent.setOrigin(6, 1.25f);
+        redAccent.setPosition(hp.x+i*8, hp.y-1); redAccent.setRotation(i*-3.f);
+        redAccent.setFillColor(flash(sf::Color(175,35,35,160),fl)); w.draw(redAccent);
+    }
+
+    // Eyes — sharp amber/green through the paint
+    drawEyePair(w, hp.x, hp.y-3, 7, 6, 4.5f, flash(sf::Color(165,115,5),fl), face);
+    // Bold dark brows
+    for(int i=-1;i<=1;i+=2)
+        drawBrow(w, hp.x+i*7, hp.y-11, 10, hairCol, 0);
+
+    // Bold red lips — Kyoshi warrior signature
+    drawEllipse(w, hp.x+face*1.5f, hp.y+10, 6, 3.5f, flash(sf::Color(175,30,30),fl));
+    // Lip highlight
+    drawEllipse(w, hp.x+face*1-1, hp.y+9, 2, 1.5f, sf::Color(220,80,80,100));
+
+    // Gold fan-shaped headdress crown
+    sf::ConvexShape hd; hd.setPointCount(7);
+    hd.setPoint(0,{-14,-r-2}); hd.setPoint(1,{-10,-r-10}); hd.setPoint(2,{-4,-r-15});
+    hd.setPoint(3,{0,-r-18}); hd.setPoint(4,{4,-r-15});
+    hd.setPoint(5,{10,-r-10}); hd.setPoint(6,{14,-r-2});
     hd.setPosition(hp); hd.setFillColor(flash(sf::Color(255,210,40),fl)); w.draw(hd);
-    // Headdress gem
-    drawEllipse(w, hp.x, hp.y-r-14, 4, 4, flash(sf::Color(255,80,80),fl));
+    // Headdress inner detail
+    sf::ConvexShape hdInner; hdInner.setPointCount(5);
+    hdInner.setPoint(0,{-8,-r-4}); hdInner.setPoint(1,{-4,-r-10});
+    hdInner.setPoint(2,{0,-r-13}); hdInner.setPoint(3,{4,-r-10}); hdInner.setPoint(4,{8,-r-4});
+    hdInner.setPosition(hp); hdInner.setFillColor(flash(sf::Color(240,190,30),fl)); w.draw(hdInner);
+    // Headdress center gem
+    drawEllipse(w, hp.x, hp.y-r-14, 4, 4, flash(sf::Color(255,70,70),fl));
+    drawEllipse(w, hp.x-1, hp.y-r-15, 1.5f, 1.5f, sf::Color(255,160,160,150));
+
+    // Gold hair ornament pins
     for(int i=-1;i<=1;i+=2)
-        drawEllipse(w, hp.x+i*(r-1), hp.y+2, 4, 5, skin);
+        drawEllipse(w, hp.x+i*12, hp.y-r+2, 3, 3, flash(sf::Color(255,200,40),fl));
+
+    // Ears (barely visible under hair)
+    for(int i=-1;i<=1;i+=2)
+        drawEllipse(w, hp.x+i*(r-1), hp.y+2, 3.5f, 4.5f, skin);
 }
 
 // =====================================================================
@@ -616,6 +912,51 @@ void CartoonRenderer::drawOutfit(sf::RenderWindow& w, sf::Vector2f pos, Element 
             pl.setPosition(pos.x, pos.y-28+bob+yi*8);
             pl.setFillColor(flash(sf::Color(100,100,110),fl)); w.draw(pl);
         }
+        // Rivets on shoulders
+        for(int i=-1;i<=1;i+=2)
+            drawEllipse(w, pos.x+i*13, pos.y-32+bob, 2, 2, flash(sf::Color(90,90,100),fl));
+    }
+    if(e == Element::Lightning){
+        // Azula Fire Nation armor — shoulder spikes + gold trim
+        for(int i=-1;i<=1;i+=2){
+            sf::ConvexShape sp; sp.setPointCount(3);
+            sp.setPoint(0,{0,0}); sp.setPoint(1,{(float)(i*8),-9}); sp.setPoint(2,{(float)(i*4),0});
+            sp.setPosition(pos.x+i*13, pos.y-32+bob);
+            sp.setFillColor(flash(sf::Color(160,20,20),fl)); w.draw(sp);
+        }
+        sf::RectangleShape trim({26,2}); trim.setOrigin(13,1);
+        trim.setPosition(pos.x, pos.y-28+bob); trim.setFillColor(flash(sf::Color(255,195,30),fl)); w.draw(trim);
+    }
+    if(e == Element::Plant){
+        // Vine wraps around torso
+        for(int i=0;i<3;i++){
+            sf::RectangleShape vine({24,2.5f}); vine.setOrigin(12,1.25f);
+            vine.setPosition(pos.x, pos.y-26+bob+i*10); vine.setRotation(i*5.f-5.f);
+            vine.setFillColor(flash(sf::Color(40,110,28,150),fl)); w.draw(vine);
+        }
+    }
+    if(e == Element::Ice){
+        // Fur trim on collar (thicker)
+        sf::RectangleShape fur({30,5}); fur.setOrigin(15,2.5f);
+        fur.setPosition(pos.x, pos.y-34+bob);
+        fur.setFillColor(flash(sf::Color(235,235,248),fl)); w.draw(fur);
+    }
+    if(e == Element::Sword){
+        // Scabbard/strap on back (diagonal)
+        sf::RectangleShape strap({3,34}); strap.setOrigin(1.5f,0);
+        strap.setPosition(pos.x-6, pos.y-32+bob); strap.setRotation(-15.f);
+        strap.setFillColor(flash(sf::Color(70,50,35),fl)); w.draw(strap);
+    }
+    if(e == Element::Fan){
+        // Armor plate details (Kyoshi warrior green armor)
+        for(int i=-1;i<=1;i+=2){
+            sf::RectangleShape plate({10,6}); plate.setOrigin(5,3);
+            plate.setPosition(pos.x+i*11, pos.y-26+bob);
+            plate.setFillColor(flash(sf::Color(30,90,50),fl)); w.draw(plate);
+        }
+        // Gold trim
+        sf::RectangleShape gtrim({26,2}); gtrim.setOrigin(13,1);
+        gtrim.setPosition(pos.x, pos.y-15+bob); gtrim.setFillColor(flash(sf::Color(255,200,40),fl)); w.draw(gtrim);
     }
 }
 
@@ -651,8 +992,18 @@ void CartoonRenderer::drawLeg(sf::RenderWindow& w, sf::Vector2f pos, Element e, 
     leg.setOutlineThickness(1.5f); leg.setOutlineColor(flash(sf::Color(15,15,15),fl)); w.draw(leg);
     float rad=angle*(float)M_PI/180.f;
     float sx=lx+std::sin(rad)*28, sy=ly+std::cos(rad)*28;
-    // Rounded shoe
-    drawRoundRect(w, sx, sy, 14, 6, 2, shoe);
+
+    if(e == Element::Earth){
+        // Toph's bare feet — no shoes!
+        sf::Color skin = flash(bodyCol(Element::Earth), fl);
+        drawEllipse(w, sx, sy, 8, 4, skin, flash(sf::Color(180,150,110),fl), 1.f);
+        // Toes hint
+        for(int t2=0;t2<3;t2++)
+            drawEllipse(w, sx-3+t2*3, sy-3, 2, 1.5f, skin);
+    } else {
+        // Rounded shoe
+        drawRoundRect(w, sx, sy, 14, 6, 2, shoe);
+    }
 }
 
 // =====================================================================
@@ -685,7 +1036,7 @@ void CartoonRenderer::drawElementalAura(sf::RenderWindow& w, sf::Vector2f pos, E
             case Element::Water:     p.setFillColor(sf::Color(60,160,255,al)); break;
             case Element::Earth:     p.setFillColor(sf::Color(130,100,50,al)); break;
             case Element::Metal:     p.setFillColor(sf::Color(180,180,200,al)); break;
-            case Element::Lightning: p.setFillColor(sf::Color(255,230,100,al)); break;
+            case Element::Lightning: p.setFillColor(sf::Color(200,220,255,al)); break;
             case Element::Plant:     p.setFillColor(sf::Color(100,220,80,al)); break;
             case Element::Ice:       p.setFillColor(sf::Color(180,240,255,al)); break;
             case Element::Sword:     p.setFillColor(sf::Color(200,220,255,al)); break;
@@ -817,7 +1168,7 @@ void CartoonRenderer::drawPortrait(sf::RenderWindow& w, sf::Vector2f pos, Elemen
         case Element::Water:     auraCol = sf::Color(40,140,240);  break;
         case Element::Earth:     auraCol = sf::Color(60,160,50);   break;
         case Element::Metal:     auraCol = sf::Color(160,160,180); break;
-        case Element::Lightning: auraCol = sf::Color(180,100,255); break;
+        case Element::Lightning: auraCol = sf::Color(200,50,40);  break;
         case Element::Plant:     auraCol = sf::Color(80,200,60);   break;
         case Element::Ice:       auraCol = sf::Color(160,220,255); break;
         case Element::Sword:     auraCol = sf::Color(150,170,200); break;
